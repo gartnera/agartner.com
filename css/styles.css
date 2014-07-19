@@ -1,0 +1,155 @@
+/*** Fixes ***/
+
+* {
+	box-sizing: border-box;
+	/* font-family: 'Source Sans Pro', sans-serif; */
+}
+/*************/
+
+body {
+	background-color: #eee;
+}
+#container {
+	max-width: 900px;
+	margin: 0px auto;
+}
+.content-section {
+	background-color: white;
+	padding: 10px;
+	margin: 20px;
+}
+nav {
+	background-color: #555;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+nav:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+nav a, nav .nav-dropdown {
+	font-size: 14pt;
+	text-decoration: none;
+	color: white;
+	background: #337781;
+	padding: 10px;
+	margin: 5px;
+	width: 215px;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	border-radius: 2px;
+	position: relative;
+}
+nav .active {
+	box-shadow: inset 0 0 5px black;
+}
+nav a .gear {
+	height: 31px;
+	width: 31px;
+	background-color: #44aa8e;
+	right: 5px;
+	top: 5px;
+	position: absolute;
+	border-radius: 5px;
+	background-image: url('../icons/ios7-gear-128.png');
+	background-size: contain;
+}
+nav a .search {
+	height: 31px;
+	width: 31px;
+	background-color: #44aa8e;
+	left: 5px;
+	top: 5px;
+	position: absolute;
+	border-radius: 5px;
+	background-image: url('../icons/Mag_glass.png');
+	background-size: contain;
+}
+.gear:hover,.search:hover {
+	background-color: #2a8e73;
+}
+
+.nav-dropdown:hover > .nav-dropdown-links{
+	display:block;
+}
+
+.nav-dropdown-links{
+	display:none;
+	position: absolute;
+	left: -5px;
+	margin-top:30px;
+	background-color: #555;
+	border-radius: 8px;
+}
+
+.nav-dropdown:hover{
+	display:block;
+}
+
+.nav-dropdown-links:before{
+	padding-top:60px;
+	width: 215px;
+	height:0;
+	content:"";
+	position:absolute;
+	left:5px;
+	top:-60px;
+}
+
+.nav-dropdown-links:after{
+	z-index:100;
+	position:absolute;
+	top:-13px;
+	left: 100px;
+    content:"";
+    width:0;
+    height:0;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	
+	border-bottom: 13px solid #555;
+}
+
+@media (max-width: 900px) {
+	nav a, nav .nav-dropdown {
+		width: 200px;
+		float: left;
+		clear: both;
+	}
+	nav {
+		width: 210px;
+		border-radius: 0;
+		height: auto;
+		min-height: 100%;
+		position: fixed;
+		background-color: #555;
+		z-index: 9;
+	}
+}
+p {
+	font-size: 14pt;
+	line-height: 1.5em;
+	text-align: justify;
+	margin: 0 20px;
+}
+h1 {
+	text-align: center;
+}
+h3 {
+	margin: 10px 20px 0 20px;
+}
+.date{
+	text-align:center;
+	font-size:  10pt;
+	margin-bottom: 10px;
+}
+/*
+.content-section hr {
+	margin: 10px -10px;
+	height: 5px;
+	background-color: #eee;
+	border-style: none;
+}
+*/
