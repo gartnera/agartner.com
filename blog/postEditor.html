@@ -1,11 +1,11 @@
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="../css/styles.css" />
-<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="../css/sir-trevor-icons.css" />
-<link rel="stylesheet" type="text/css" href="../css/sir-trevor.css" />
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/sir-trevor-icons.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/sir-trevor.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -13,6 +13,7 @@
 	<nav>
 		<a href="link.html">Profile</a>
 		<a href="link.html" class="active"><span class="search"></span>Blog<span class="gear"></span></a>
+
 		<div class="nav-dropdown">
 			Other &#x25BE;
 			<div class="nav-dropdown-links">
@@ -36,6 +37,7 @@
 	<div id="body-container">
 		<div class="content-section">
 			<form>
+				Title:&nbsp;&nbsp;<input type="text" name="title" style="width:795px;"/>
 				<div class="errors"></div>
 				<textarea class="sir-trevor" name="content"></textarea>
 				<input type="submit" value="Submit">
@@ -50,35 +52,35 @@
 <script src="../js/eventable.js" type="text/javascript"></script>
 <script src="../js/sir-trevor.min.js" type="text/javascript"></script>
 
-<script type="text/javascript" ">
-$(function(){
+<script type="text/javascript">
+	$(function () {
 		SirTrevor.DEBUG = true;
 		SirTrevor.LANGUAGE = "en";
 
 		SirTrevor.setBlockOptions("Text", {
-onBlockRender: function() {
-console.log("Text block rendered");
-}
-});
-
-		window.editor = new SirTrevor.Editor({
-el: $('.sir-trevor'),
-blockTypes: [
-"Heading",
-"Text",
-"List",
-"Quote",
-"Image",
-"Video",
-"Tweet"
-]
-});
-
-$('form').bind('submit', function(){
-		return false;
+			onBlockRender: function () {
+				console.log("Text block rendered");
+			}
 		});
 
-});
+		window.editor = new SirTrevor.Editor({
+			el: $('.sir-trevor'),
+			blockTypes: [
+				"Heading",
+				"Text",
+				"List",
+				"Quote",
+				"Image",
+				"Video",
+				"Tweet"
+			]
+		});
+
+		$('form').bind('submit', function () {
+			return false;
+		});
+
+	});
 </script>
 
 
