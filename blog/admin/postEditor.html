@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="/css/sir-trevor-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/sir-trevor.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/css/highlight.css"/>
+	<script src="/js/highlight.js"></script>
+
 </head>
 
 <body>
@@ -35,9 +38,10 @@
 		</div>
 	</nav>
 	<div id="body-container">
-		<div class="content-section" >
+		<div class="content-section">
 			<form method="post" action="createPost.php">
 				Title:&nbsp;&nbsp;<input type="text" name="title" style="width:775px;"/>
+
 				<div class="errors"></div>
 				<textarea class="sir-trevor" name="content"></textarea>
 				<input type="submit" value="Submit">
@@ -67,6 +71,30 @@
 			uploadUrl: "images/"
 		})
 
+		SirTrevor.Blocks.Code = SirTrevor.Block.extend({
+
+			type: "code",
+
+			title: function () {
+				return 'Code';
+			},
+
+			editorHTML: '<pre><code contenteditable="true" class="st-text-block" style="text-align: left; font-size: 10pt" >&#8203;</code></pre>',
+
+			onContentPasted: null,
+
+			icon_name: 'quote',
+
+			setData: function (){
+				var code = this.getTextBlock()
+				this.blockStorage.data = {"text" : code.html()};
+			},
+
+			loadData: function (data) {
+				this.getTextBlock().html(data.text, this.type);
+			}
+		});
+
 		window.editor = new SirTrevor.Editor({
 			el: $('.sir-trevor'),
 			blockTypes: [
@@ -76,7 +104,8 @@
 				"Quote",
 				"Image",
 				"Video",
-				"Tweet"
+				"Tweet",
+				"Code"
 			]
 		});
 

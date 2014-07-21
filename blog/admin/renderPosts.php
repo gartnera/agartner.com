@@ -9,6 +9,14 @@ function processElement($element){
 		case 'image':
 			$src = $element->data->file->url;
 			return "<img src=\"$src\" />";
+		case 'heading':
+			$text = $element->data->text;
+			return "<h2>$text</h2>";
+		case 'list':
+			return $pd->text($element->data->text);
+		case 'code';
+			$text = $element->data->text;
+			return "<pre><code>$text</code></pre>";
 	}
 	return null;
 }
