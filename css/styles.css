@@ -181,6 +181,11 @@ code{
 	font-size: 10pt;
 }
 
+iframe.vid{
+	width: 100%;
+	height: 500px;
+}
+
 /*
 .content-section hr {
 	margin: 10px -10px;

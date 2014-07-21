@@ -14,9 +14,12 @@ function processElement($element){
 			return "<h2>$text</h2>";
 		case 'list':
 			return $pd->text($element->data->text);
-		case 'code';
+		case 'code':
 			$text = $element->data->text;
 			return "<pre><code>$text</code></pre>";
+		case 'video':
+			$id = $element->data->remote_id;
+			return "<iframe class=\"vid\" src=\"https://youtube.com/embed/$id\" width=\"580\" height=\"320\" frameborder=\"0\" allowfullscreen />";
 	}
 	return null;
 }
