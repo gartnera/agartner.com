@@ -55,10 +55,14 @@ $postList = array_diff(scandir("../posts/json", SCANDIR_SORT_DESCENDING), array(
 
 $indexHtml = '';
 
+$postEditPage = '<div class="content-section"><form method="get" action="postEditor.html"><select name="id">';
+
 foreach ($postList as $post){
 	preg_match('/^(.*)\.json$/', $post, $matches);
 	$number = $matches[1];
 	$json = json_decode(file_get_contents("../posts/json/$post"));
+
+	$postEditPage .= "<option value=\"$number\">$json->title</option>";
 
 	$postHtml = generatePostHtml($json);
 
@@ -68,6 +72,11 @@ foreach ($postList as $post){
 	$themedPost = applyBlogTheme($postHtml);
 	file_put_contents("../posts/$number.html", $themedPost);
 }
+
+$postEditPage .= '</select><input type="submit" value="Submit" /></form></div>';
+
+$themedPostEditPage = applyBlogTheme($postEditPage);
+file_put_contents('editPosts.html', $themedPostEditPage);
 
 $themedIndex = applyBlogTheme($indexHtml);
 file_put_contents('../index.html', $themedIndex);

@@ -14,33 +14,31 @@
 <body>
 <div id="container">
 	<nav>
-		<a href="link.html">Profile</a>
-		<a href="link.html" class="active"><span class="search"></span>Blog<span class="gear"></span></a>
+		<a href="/profile">Profile</a>
+		<a href="#" class="active"><span class="search"></span>Blog<span class="gear"></span></a>
 
 		<div class="nav-dropdown">
 			Other &#x25BE;
 			<div class="nav-dropdown-links">
-				<a href="files.html">Files</a>
-				<a href="files.html">Another thing</a>
-				<a href="files.html">dsuccdc.org</a>
-
+				<a href="/files">Files</a>
+				<a href="#">Another thing</a>
+				<a href="http://dsuccdc.org">dsuccdc.org</a>
 			</div>
 		</div>
 		<div class="nav-dropdown">
 			Social &#x25BE;
 			<div class="nav-dropdown-links">
-				<a href="files.html">Facebook</a>
-				<a href="files.html">Twitter</a>
-				<a href="files.html">Github</a>
-				<a href="files.html">Linkedin</a>
-
+				<a href="https://www.facebook.com/gartner3">Facebook</a>
+				<a href="https://twitter.com/hazroot">Twitter</a>
+				<a href="https://github.com/gartnera">Github</a>
+				<a href="https://linkedin.com/in/agartner">Linkedin</a>
 			</div>
 		</div>
 	</nav>
 	<div id="body-container">
 		<div class="content-section">
 			<form method="post" action="createPost.php">
-				Title:&nbsp;&nbsp;<input type="text" name="title" style="width:775px;"/>
+				Title:&nbsp;&nbsp;<input type="text" name="title" id="title" style="width:775px;"/>
 
 				<div class="errors"></div>
 				<textarea class="sir-trevor" name="content"></textarea>
@@ -68,7 +66,7 @@
 		});
 
 		SirTrevor.setDefaults({
-			uploadUrl: "images/"
+			uploadUrl: "/blog/images/index.php"
 		})
 
 		SirTrevor.Blocks.Code = SirTrevor.Block.extend({
@@ -85,9 +83,9 @@
 
 			icon_name: 'quote',
 
-			setData: function (){
+			setData: function () {
 				var code = this.getTextBlock()
-				this.blockStorage.data = {"text" : code.html()};
+				this.blockStorage.data = {"text": code.html()};
 			},
 
 			loadData: function (data) {
@@ -109,6 +107,25 @@
 			]
 		});
 
+	});
+	$(document).ready(function () {
+		if (!$("title").val()) {
+			var id = window.location.search.match(/(?:id=)(.*)(?:&)?/);
+			if (id) {
+				id = id[1];
+				$("form").append('<input type="hidden" name="index" value="' + id + '" />');
+				$.getJSON("/blog/posts/json/" + id + ".json", function (data) {
+					$("form").append('<input type="hidden" name="date" value="' + data.date + '" />');
+
+					var st = SirTrevor.getInstance();
+					$("#title").val(data.title);
+
+					_.each(data.data, function (data) {
+						st.createBlock(data.type, data.data);
+					})
+				});
+			}
+		}
 	});
 </script>
 </body>
