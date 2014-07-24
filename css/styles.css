@@ -2,7 +2,7 @@
 
 * {
 	box-sizing: border-box;
-	/* font-family: 'Source Sans Pro', sans-serif; */
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*************/
@@ -46,47 +46,13 @@ nav a, .nav-dropdown {
 	display: inline-block;
 	border-radius: 2px;
 	position: relative;
-}
-
-nav a {
-	padding: 10px;
-}
-
-nav .nav-dropdown {
-	padding: 9px;
 	height: 42px;
+	line-height: 25px;
+	padding:9px;
 }
 
 nav .active {
 	box-shadow: inset 0 0 5px black;
-}
-
-nav a .gear {
-	height: 31px;
-	width: 31px;
-	background-color: #44aa8e;
-	right: 5px;
-	top: 5px;
-	position: absolute;
-	border-radius: 5px;
-	background-image: url('/icons/ios7-gear-128.png');
-	background-size: contain;
-}
-
-nav a .search {
-	height: 31px;
-	width: 31px;
-	background-color: #44aa8e;
-	left: 5px;
-	top: 5px;
-	position: absolute;
-	border-radius: 5px;
-	background-image: url('/icons/Mag_glass.png');
-	background-size: contain;
-}
-
-.gear:hover, .search:hover {
-	background-color: #2a8e73;
 }
 
 .nav-dropdown:hover > .nav-dropdown-links {
