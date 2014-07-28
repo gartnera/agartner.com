@@ -1,3 +1,5 @@
+php_flag engine on
+
 AuthUserFile C:\\xampp\\htdocs\\agartner.com-v4\\blog\\admin\\.htpasswd
 AuthName "Blog Administraton"
 AuthType Basic

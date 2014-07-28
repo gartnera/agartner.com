@@ -1,4 +1,10 @@
 /*** Fixes ***/
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+}
 
 * {
 	box-sizing: border-box;
@@ -107,23 +113,7 @@ nav .active, .nav-dropdown.active, .pagation a.active {
 	margin: 1px;
 }
 
-@media (max-width: 900px) {
-	nav a, nav .nav-dropdown {
-		width: 200px;
-		float: left;
-		clear: both;
-	}
 
-	nav {
-		width: 210px;
-		border-radius: 0;
-		height: auto;
-		min-height: 100%;
-		position: fixed;
-		background-color: #555;
-		z-index: 9;
-	}
-}
 
 p {
 	font-size: 14pt;
@@ -137,7 +127,11 @@ h1 {
 }
 
 h2 {
-	margin: 10px 0px 0 0px;
+	margin: 10px 0 0 0;
+}
+
+h3 {
+	margin: 10px 0 0 0;
 }
 
 .date {
@@ -171,3 +165,60 @@ iframe.vid{
 	border-style: none;
 }
 */
+
+/*** Profile Styles ***/
+.headWdate h3{
+	float:left;
+}
+.headWdate p{
+	float: right;
+	margin-top:14px;
+	line-height: 1em;
+}
+.clearfix:after, .headWdate:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.link{
+	height: 12px;
+	width: 12px;
+	margin: 0 5px;
+}
+
+.p-title{
+	line-height: 1em;
+	margin-bottom: 5px;
+}
+
+/*** Media Queries (have to be last) ***/
+@media (max-width: 900px) {
+	nav a, nav .nav-dropdown {
+		width: 200px;
+		float: left;
+		clear: both;
+	}
+
+	nav {
+		width: 210px;
+		border-radius: 0;
+		height: auto;
+		min-height: 100%;
+		position: fixed;
+		background-color: #555;
+		z-index: 9;
+		display:none;
+	}
+	.headWdate p{
+		float:left;
+		clear: left;
+		margin-top: 0;
+	}
+	.content-section{
+		margin: 20px 10px;
+	}
+}

@@ -1,7 +1,7 @@
 <?php
 $serverbase = "http://localhost/blog/images/";
 $basename = basename($_FILES['attachment']['name']['file']);
-$uploadedfile = getcwd() . DIRECTORY_SEPARATOR . basename($_FILES['attachment']['name']['file']);
+$uploadedfile = '../images/' . basename($_FILES['attachment']['name']['file']);
 
 while (file_exists($uploadedfile)){
 	$uploadedfile = str_replace('.', '1.', $uploadedfile);
