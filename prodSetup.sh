@@ -17,4 +17,5 @@ ln -s css blog/css
 ln -s js blog/js
 ln -s css profile/css
 ln -s js profile/js
+ln -s icons profile/icons
 
