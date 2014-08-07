@@ -19,7 +19,7 @@ body {
 
 #container {
 	max-width: 900px;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 .content-section {
@@ -192,8 +192,6 @@ iframe.vid{
 	clear: both;
 	height: 0;
 }
-
-
 
 .p-title{
 	line-height: 1em;
