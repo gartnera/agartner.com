@@ -13,9 +13,9 @@ chmod o+w blog/posts
 chmod o+w blog/posts/json
 chmod o+w blog/images
 
-ln -s css blog/css
-ln -s js blog/js
-ln -s css profile/css
-ln -s js profile/js
-ln -s icons profile/icons
+ln -sr css blog/css
+ln -sr js blog/js
+ln -sr css profile/css
+ln -sr js profile/js
+ln -sr icons profile/icons
 
