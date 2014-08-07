@@ -202,7 +202,7 @@ iframe.vid{
 
 /*** Media Queries (have to be last) ***/
 /*TODO: change to device type in addition to pixels */
-@media (max-width: 900px) {
+@media handheld, (max-width: 900px) {
 	nav a, nav .nav-dropdown {
 		width: 200px;
 		float: left;
