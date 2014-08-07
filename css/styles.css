@@ -102,6 +102,22 @@ nav .active, .nav-dropdown.active, .pagation a.active {
 	border-bottom: 13px solid #555;
 }
 
+.menu-icon{
+	left: 0;
+	top: 0;
+	position: fixed;
+	height: 32px;
+	width: 32px;
+	background: #337781 url('/icons/menu.png') no-repeat center;
+	border-bottom-right-radius: 5px;
+	padding: 20px;
+	display: none;
+}
+
+.menu-icon:hover~nav{
+	display:block;
+}
+
 .pagation a{
 	text-decoration: none;
 	color: white;
@@ -113,7 +129,9 @@ nav .active, .nav-dropdown.active, .pagation a.active {
 	margin: 1px;
 }
 
-
+nav:hover{
+	display:block;
+}
 
 p {
 	font-size: 14pt;
@@ -202,13 +220,13 @@ iframe.vid{
 /*TODO: change to device type in addition to pixels */
 @media handheld, (max-width: 900px) {
 	nav a, nav .nav-dropdown {
-		width: 200px;
+		width: 140px;
 		float: left;
 		clear: both;
 	}
 
 	nav {
-		width: 210px;
+		width: 150px;
 		border-radius: 0;
 		height: auto;
 		min-height: 100%;
@@ -216,6 +234,32 @@ iframe.vid{
 		background-color: #555;
 		z-index: 9;
 		display:none;
+		top: 0;
+	}
+
+	.nav-dropdown-links{
+		top: -32px;
+		left: 155px;
+	}
+	.nav-dropdown-links:before{
+		margin-left: 200px;
+		width: 20px;
+		height: 45px;
+		left: -215px;
+		top: 0;
+		padding-top: 0;
+	}
+	.nav-dropdown-links:after{
+		border-top: 13px solid transparent;
+		border-bottom: 13px solid transparent;
+		border-right: 13px solid #555;
+		border-left: 0;
+		left: -10px;
+		top: 10px;
+	}
+
+	.menu-icon{
+		display:block;
 	}
 	.headWdate p{
 		float:left;
@@ -225,4 +269,5 @@ iframe.vid{
 	.content-section{
 		margin: 20px 10px;
 	}
+
 }
