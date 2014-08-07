@@ -167,6 +167,12 @@ iframe.vid{
 */
 
 /*** Profile Styles ***/
+.link{
+	height: 12px;
+	width: 12px;
+	margin: 0 3px;
+}
+
 .headWdate h3{
 	float:left;
 }
@@ -174,6 +180,9 @@ iframe.vid{
 	float: right;
 	margin-top:14px;
 	line-height: 1em;
+}
+.headWdate .link{
+	margin-top: 15px;
 }
 .clearfix:after, .headWdate:after{
 	visibility: hidden;
@@ -184,18 +193,15 @@ iframe.vid{
 	height: 0;
 }
 
-.link{
-	height: 12px;
-	width: 12px;
-	margin: 0 5px;
-}
+
 
 .p-title{
 	line-height: 1em;
-	margin-bottom: 5px;
+	margin: 0;
 }
 
 /*** Media Queries (have to be last) ***/
+/*TODO: change to device type in addition to pixels */
 @media (max-width: 900px) {
 	nav a, nav .nav-dropdown {
 		width: 200px;
