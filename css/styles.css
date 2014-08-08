@@ -216,6 +216,10 @@ iframe.vid{
 	margin: 0;
 }
 
+p:not(.p-title){
+	text-indent: 15px;
+}
+
 /*** Media Queries (have to be last) ***/
 /*TODO: change to device type in addition to pixels */
 @media handheld, (max-width: 900px) {
