@@ -72,6 +72,7 @@ nav .active, .nav-dropdown.active, .pagation a.active {
 	margin-top: 30px;
 	background-color: #555;
 	border-radius: 8px;
+	z-index:100;
 }
 
 .nav-dropdown:hover {
@@ -164,10 +165,13 @@ img{
 ul{
 	margin: 5px 0;
 }
+pre{
+	background: #eee;
+}
 code{
-	background: #474949;
+	background: #eee;
 	tab-size: 4;
-	font-size: 10pt;
+	font-size: 12pt;
 }
 
 iframe.vid{

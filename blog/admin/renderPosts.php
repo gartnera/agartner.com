@@ -130,7 +130,7 @@ foreach ($postList as $post) {
 	preg_match('/(?:<h1>)(.*)(?:<\/h1>)/', $postHtml, $matches);
 	$title = $matches[1];
 	preg_match('/(?:<p>)(.*)(?:<\/p>)/', $postHtml, $matches);
-	$description = $matches[1];
+	$description = strip_tags($matches[1]);
 
 	$themedPost = applyBlogTheme($postHtml, $title, $description);
 	file_put_contents("../posts/$number.html", $themedPost);
