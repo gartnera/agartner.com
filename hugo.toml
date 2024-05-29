@@ -1,0 +1,71 @@
+baseurl = "https://agartner.com"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+[services]
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Alex Gartner"
+  info = "Software Engineer"
+  description = "Alex Gartner's Personal Website"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/profile_43.jpg"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2024
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/gartnera/"
+[[params.social]]
+  name = "Instagram"
+  icon = "fa-brands fa-instagram fa-2x"
+  weight = 2
+  url = "https://www.instagram.com/alexander_gartner"
+[[params.social]]
+  name = "Linkedin"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 3
+  url = "https://www.linkedin.com/in/agartner/"
+[[params.social]]
+  name = "Gitlab"
+  icon = "fa-brands fa-gitlab fa-2x"
+  weight = 4
+  url = "https://gitlab.com/gartnera/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 5
+  url = "https://twitter.com/hazroot/"
+[[params.social]]
+  name = "Email"
+  icon = "fa fa-envelope fa-2x"
+  weight = 6
+  url = "javascript:window.open(atob('bWFpbHRvOndlYnNpdGUtY29udGFjdC0yNEBhZ2FydG5lci5jb20='), '_blank')"
+
+# Menu links
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  url  = "/"
