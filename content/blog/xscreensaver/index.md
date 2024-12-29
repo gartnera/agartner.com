@@ -43,7 +43,7 @@ This workaround is not needed on KDE and Hyprland as they allow you to opt out o
 
 ## wscreensaver
 
-I also discovered [wscreensaver](https://git.sr.ht/~mstoeckl/wscreensaver) which allows you to us some xscreensaver animations on your screen locker. The upstream instructions aren't terribly clear so here are mine:
+I also discovered [wscreensaver](https://git.sr.ht/~mstoeckl/wscreensaver) which allows you to use some xscreensaver animations on your screen locker. The upstream instructions aren't terribly clear, so here are mine:
 
 ```bash
 git clone 'https://git.sr.ht/~mstoeckl/wscreensaver'
