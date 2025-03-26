@@ -62,7 +62,7 @@ style = "github-dark"
   name = "Email"
   icon = "fa fa-envelope fa-2x"
   weight = 6
-  url = "javascript:window.open(atob('bWFpbHRvOndlYnNpdGUtY29udGFjdC0yNEBhZ2FydG5lci5jb20='), '_blank')"
+  url = "javascript:window.open(atob('bWFpbHRvOndlYnNpdGUtY29udGFjdC0yNUBhZ2FydG5lci5jb20='), '_blank')"
 
 # Menu links
 [[menu.main]]
