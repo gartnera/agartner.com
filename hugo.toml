@@ -3,8 +3,6 @@ theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-paginate = 100
-
 [services]
 
 [markup.highlight]
