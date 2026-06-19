@@ -1,6 +1,6 @@
 baseurl = "https://agartner.com"
 theme = "hugo-coder"
-languagecode = "en"
+locale = "en"
 defaultcontentlanguage = "en"
 
 [services]
